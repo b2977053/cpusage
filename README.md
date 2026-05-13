@@ -33,6 +33,32 @@ npx @willh/cpusage
 cpusage
 ```
 
+---
+
+### Windows 使用者快速指令
+
+在 Windows 環境下，Copilot 的 session 記錄通常儲存在 VS Code 的資料夾中。你可以直接在 **PowerShell** 複製貼上對應版本的指令進行分析：
+
+#### **VS Code (穩定版)**
+
+```powershell
+# 設定路徑並按月統計輸出 JSON
+$env:SESSION_DIR="$env:APPDATA\Code\User\workspaceStorage"
+cpusage --unit month --json
+
+```
+
+#### **VS Code (Insiders 版)**
+
+```powershell
+# 設定路徑並按月統計輸出 JSON
+$env:SESSION_DIR="$env:APPDATA\Code - Insiders\User\workspaceStorage"
+cpusage --unit month --json
+
+```
+
+---
+
 ### 命令列參數
 
 | 參數 | 說明 |
